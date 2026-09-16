@@ -42,7 +42,7 @@ jobs:
         ./zig-out/bin/github-stats
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        EXCLUDE_REPOS: "swisstopo,gridonic/swisstopo"
+        EXCLUDE_REPOS: "gridonic/*"
         EXCLUDE_LANGS: ${{ secrets.EXCLUDE_LANGS }}
         EXCLUDE_PRIVATE: "false"
         SILENT: "false"
