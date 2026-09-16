@@ -643,6 +643,7 @@ fn getLinesChanged(
                     "Failed to get contribution data for {s} ({?s})",
                     .{ item.repo.name, status.phrase() },
                 );
+                std.log.err("Fehler beim Abrufen der Statistiken für: {s}\n", .{repo.name});
                 std.log.err(
                     "Request failed with response {?s}",
                     .{status.phrase()},
