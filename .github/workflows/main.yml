@@ -31,8 +31,8 @@ jobs:
 
     - name: Checkout history branch
       run: |
-        git config --global user.name "jstrieb/github-stats"
-        git config --global user.email "github-stats[bot]@jstrieb.github.io"
+        git config --global user.name "btemperli/github-stats"
+        git config --global user.email "github-stats[bot]@btemperli.github.io"
         # Push generated files to the generated branch
         git pull
         git checkout generated || git checkout -b generated
@@ -42,7 +42,7 @@ jobs:
         ./zig-out/bin/github-stats
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        EXCLUDE_REPOS: ${{ secrets.EXCLUDE_REPOS }}
+        EXCLUDE_REPOS: "swisstopo,gridonic/swisstopo"
         EXCLUDE_LANGS: ${{ secrets.EXCLUDE_LANGS }}
         EXCLUDE_PRIVATE: "false"
         SILENT: "false"
